@@ -1,6 +1,6 @@
 # Gemini Shooter
 
-A space shooter game for Atari 8-bit XL/XE computers, written in Mad Pascal.
+A space shooter game for Atari 8-bit XL/XE computers, written by GitHub Copilot AI Agent in Mad Pascal.
 
 ## Description
 
