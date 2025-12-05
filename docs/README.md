@@ -5,7 +5,7 @@ This directory contains the GitHub Pages website for the Gemini Shooter project.
 ## Viewing the Site
 
 Once GitHub Pages is enabled, the site will be available at:
-`https://mrcin-maw.github.io/_MADPascal_/`
+`https://mrcin-maw.github.io/GeminiShooter/`
 
 ## Enabling GitHub Pages
 
@@ -60,5 +60,5 @@ docs/
   └── README.md         # This file
 ```
 
-The page links to the game XEX file at `../GeminiShooter/builds/GeminiShooter.xex`
+The page links to the game XEX file at `../builds/GeminiShooter.xex`
 which is accessible through GitHub's repository structure.

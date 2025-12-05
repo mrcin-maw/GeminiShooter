@@ -60,7 +60,7 @@ Once the PR is merged or you want to enable Pages on this branch:
 5. Save and wait for deployment
 
 The site will be available at:
-**https://mrcin-maw.github.io/_MADPascal_/**
+**https://mrcin-maw.github.io/GeminiShooter/**
 
 ## Local Testing
 
