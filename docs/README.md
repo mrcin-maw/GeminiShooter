@@ -39,6 +39,7 @@ npx http-server docs -p 8000
 
 The presentation page includes:
 
+- 🌐 Bilingual support (Polish and English)
 - 🎮 Game description and features
 - 📥 Direct download link for GeminiShooter.xex
 - 🕹️ Controls and gameplay instructions
@@ -56,9 +57,10 @@ All styling and animations are responsive and work on mobile devices.
 
 ```
 docs/
-  ├── index.html        # Main presentation page
-  └── README.md         # This file
+  ├── index.html           # Main presentation page (Polish)
+  ├── index-en.html        # English version
+  ├── GeminiShooter.xex    # Game binary for download
+  └── README.md            # This file
 ```
 
-The page links to the game XEX file at `../builds/GeminiShooter.xex`
-which is accessible through GitHub's repository structure.
+The game XEX file is included directly in the docs folder for GitHub Pages access.
