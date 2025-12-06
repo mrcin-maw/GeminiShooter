@@ -20,7 +20,7 @@
 
 program GeminiShooter;
 
-{$librarypath '../../blibs/'}
+{$librarypath '../blibs/'}
 
 uses atari, crt, b_pmg, b_dl, joystick, sysutils;
 
@@ -154,7 +154,7 @@ var
   i: byte;
 begin
   for i := 0 to len - 1 do
-    Poke(addr + i, byte(s[i]));
+    Poke(addr + i, byte(s[i+1]));
 end;
 
 { ============================================================================ }
@@ -610,10 +610,12 @@ begin
   
   { Joystick movement }
   if (stick and %0100) = 0 then begin  { Right }
-    if playerX < 200 then Inc(playerX, 2);
+    if playerX <= 200 then Dec(playerX, 2);
+    if playerX < 48 then playerX := 200;
   end;
   if (stick and %1000) = 0 then begin  { Left }
-    if playerX > 48 then Dec(playerX, 2);
+    if playerX >= 48 then Inc(playerX, 2);
+    if playerX > 200 then playerX := 48;
   end;
   if (stick and %0001) = 0 then begin  { Up }
     if playerY > 100 then Dec(playerY, 2);
@@ -670,19 +672,20 @@ begin
   
   { Score }
   Str(score, scoreStr);
-  PrintStr(addr, 'SCORE:', 6);
+  PrintStr(addr, 'SCORE:'~, 6);
   for i := 1 to Length(scoreStr) do
-    Poke(addr + 5 + i, byte(scoreStr[i]));
+    Poke(addr + 5 + i, byte(scoreStr[i]) - $20);
   
   { Lives }
   addr := screenMem + 20;
-  PrintStr(addr, 'LIVES:', 6);
-  Poke(addr + 6, $30 + lives);
+  PrintStr(addr, 'LIVES:'~, 6);
+  Poke(addr + 6, $10 + lives
+  ) ;
   
   { Megabombs }
   addr := screenMem + 30;
-  PrintStr(addr, 'BOMBS:', 6);
-  Poke(addr + 6, $30 + megaBombs);
+  PrintStr(addr, 'BOMBS:'~, 6);
+  Poke(addr + 6, $10 + megaBombs);
 end;
 
 { ============================================================================ }
@@ -697,29 +700,29 @@ begin
   
   { Title }
   addr := screenMem + (5 * SCREEN_WIDTH) + 10;
-  PrintStr(addr, 'GEMINI SHOOTER', 14);
+  PrintStr(addr, 'GEMINI SHOOTER'~, 14);
   
   { Subtitle }
   addr := screenMem + (7 * SCREEN_WIDTH) + 6;
-  PrintStr(addr, 'AI-GENERATED ATARI GAME', 23);
+  PrintStr(addr, 'AI-GENERATED ATARI GAME'~, 23);
   
   { Instructions }
   addr := screenMem + (10 * SCREEN_WIDTH) + 5;
-  PrintStr(addr, 'JOYSTICK: MOVE SHIP', 19);
+  PrintStr(addr, 'JOYSTICK: MOVE SHIP'~, 19);
   
   addr := screenMem + (12 * SCREEN_WIDTH) + 5;
-  PrintStr(addr, 'BUTTON: FIRE MISSILE', 20);
+  PrintStr(addr, 'BUTTON: FIRE MISSILE'~, 20);
   
   addr := screenMem + (14 * SCREEN_WIDTH) + 5;
-  PrintStr(addr, 'SPACE/M: MEGABOMB', 17);
+  PrintStr(addr, 'SPACE/M: MEGABOMB'~, 17);
   
   { Press Fire }
   addr := screenMem + (18 * SCREEN_WIDTH) + 8;
-  PrintStr(addr, 'PRESS FIRE TO START', 19);
+  PrintStr(addr, 'PRESS FIRE TO START'~, 19);
   
   { Credits }
   addr := screenMem + (22 * SCREEN_WIDTH) + 3;
-  PrintStr(addr, 'INSPIRED BY GEMINI 3 PRO', 24);
+  PrintStr(addr, 'INSPIRED BY GEMINI 3 PRO'~, 24);
   
   { Wait for fire button }
   repeat
@@ -746,18 +749,18 @@ begin
   
   { Game Over }
   addr := screenMem + (8 * SCREEN_WIDTH) + 14;
-  PrintStr(addr, 'GAME OVER', 9);
+  PrintStr(addr, 'GAME OVER'~, 9);
   
   { Final Score }
   addr := screenMem + (12 * SCREEN_WIDTH) + 10;
   Str(score, scoreStr);
-  PrintStr(addr, 'FINAL SCORE: ', 13);
+  PrintStr(addr, 'FINAL SCORE: '~, 13);
   for i := 1 to Length(scoreStr) do
-    Poke(addr + 12 + i, byte(scoreStr[i]));
+    Poke(addr + 12 + i, byte(scoreStr[i]) - $20);
   
   { Press Fire }
   addr := screenMem + (18 * SCREEN_WIDTH) + 8;
-  PrintStr(addr, 'PRESS FIRE TO PLAY', 18);
+  PrintStr(addr, 'PRESS FIRE TO PLAY'~, 18);
   
   { Play game over sound }
   Sound(0, 200, 10, 8);
