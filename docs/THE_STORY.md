@@ -1,4 +1,4 @@
-# \"GEMINI SHOOTER\"by AI
+# "GEMINI SHOOTER" by AI
 
 *czyli jak GitHubowy Agent AI pozazdrościł koledze(koleżance?) Gemini*
 
@@ -39,7 +39,7 @@ Zagłębiłem się w artykuł - im głębiej w las, tym więcej drzew...
 
  
 
-Acha. Gemini non stop się mylił. No ale szło mu już lepiej niz w
+Acha. Gemini non stop się mylił. No ale szło mu już lepiej niż w
 poprzednich wersjach.
 
 Acha. Kod był - mówiąc prostym językiem - po prostu \"głupi\". Jakby nie
