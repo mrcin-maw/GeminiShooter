@@ -88,8 +88,7 @@ swojego Agenta prostego prompta:
 
 Wiedziałem - byłem pewny, że \"na pewno\" - NIC.Z.TEGO.NIE.WYJDZIE.
 
-![IMG_256](story-images/media/image1.png){width="5.677083333333333in"
-height="5.623611111111111in"}
+![IMG_256](story-images/media/image1.png)
 
  
 
@@ -109,8 +108,7 @@ zawiesiłem oko na \"dziwnym\" tytule w kolumnie zadań agenta AI:
 \"Gemini Shooter\" - \"Łod da fak jezd do\" - pomyślałem sobie,
 zaintrygowany otwierając wątek... \"O! I nawet XEX jest! Hłe, hłe hłe\"
 
-![IMG_257](story-images/media/image2.png){width="5.7034722222222225in"
-height="3.6347222222222224in"}
+![IMG_257](story-images/media/image2.png)
 
  
 
@@ -119,8 +117,7 @@ oczom ukazała się sieczka:
 
  
 
-![IMG_258](story-images/media/image3.png){width="5.6625in"
-height="3.9569444444444444in"}
+![IMG_258](story-images/media/image3.png)
 
  
 
@@ -133,8 +130,7 @@ Moim oczom ukazał się ekran z obcymi pędzącymi na mój statek,
 przesuwającymi się gwiazdami\...\
  
 
-![IMG_259](story-images/media/image4.png){width="5.740972222222222in"
-height="4.016666666666667in"}
+![IMG_259](story-images/media/image4.png)
 
  
 
@@ -154,26 +150,17 @@ Następne dwie godziny spędziłem zbierając szczękę z podłogi.
 Na czacie PTODT pozostał po tym ślad w postaci plików, które wypluł
 Agent i krótka notka:
 
-+-----------------------------------------------------------------------+
-| {tutaj zrzut ekranu, który widzicie powyżej}                          |
-|                                                                       |
-| *Panowie - jestem w szoku. Przyznam, że wklepałem prompta, trochę     |
-| popatrzyłem, jak agent zaczyna działać - pomyślałem sobie: \"przecież |
-| i tak mu nic działającego nie wyjdzie\". Dzisiaj po paru dniach       |
-| odkopuję się z zaległości, odpalam forka, śmieję się \"hłe, hłe hłe - |
-| nawet XEXa wygenerował\" - odpalam\... i kopara mi opada\...*         |
-|                                                                       |
-| *mój prompt brzmiał:*                                                 |
-|                                                                       |
-| {a tu treść prompta, którą już znacie}                                |
-|                                                                       |
-| \[..\]                                                                |
-|                                                                       |
-| ***to efekt pierwszej iteracji - bez dotknięcia klawiatury przeze     |
-| mnie\...***                                                           |
-+-----------------------------------------------------------------------+
-
- 
+> {tutaj zrzut ekranu, który widzicie powyżej}
+> 
+> *Panowie - jestem w szoku. Przyznam, że wklepałem prompta, trochę popatrzyłem, jak agent zaczyna działać - pomyślałem sobie: "przecież i tak mu nic działającego nie wyjdzie". Dzisiaj po paru dniach odkopuję się z zaległości, odpalam forka, śmieję się "hłe, hłe hłe - nawet XEXa wygenerował" - odpalam... i kopara mi opada...*
+> 
+> *mój prompt brzmiał:*
+> 
+> {a tu treść prompta, którą już znacie}
+> 
+> [..]
+> 
+> ***to efekt pierwszej iteracji - bez dotknięcia klawiatury przeze mnie...***
 
 W \"Mikołaja\" siadłem do kodu, który wypluł AI - kod czyściutki, jak
 marzenie - minimalnie może by trochę zoptymalizować trzeba, ale jak na
@@ -197,8 +184,7 @@ samego agenta).
 
  
 
-![IMG_260](story-images/media/image5.png){width="5.726388888888889in"
-height="4.002083333333333in"}
+![IMG_260](story-images/media/image5.png)
 
  
 
@@ -211,8 +197,7 @@ doczytać:
 
  
 
-![IMG_261](story-images/media/image6.png){width="11.03125in"
-height="7.708333333333333in"}
+![IMG_261](story-images/media/image6.png)
 
  
 

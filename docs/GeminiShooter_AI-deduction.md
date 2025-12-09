@@ -1,4 +1,4 @@
-# [GeminiShooter - deduction]{.underline}
+# GeminiShooter - AI Deduction
 
 -   Start \'playwright\' MCP server
 

@@ -4,7 +4,7 @@ A space shooter game for Atari 8-bit XL/XE computers, written by GitHub Copilot 
 
 ## About the Game
 
-📖 **[Read the full story about how this game was created →](docs/THE_STORY.md)**
+📖 **[Read the full story about how this game was created →](docs/story-en.html)**
 
 ## Description
 
