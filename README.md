@@ -2,6 +2,10 @@
 
 A space shooter game for Atari 8-bit XL/XE computers, written by GitHub Copilot AI Agent in Mad Pascal.
 
+## About the Game
+
+📖 **[Read the full story about how this game was created →](docs/THE_STORY.md)**
+
 ## Description
 
 This game is inspired by the AI-generated game project described on AtariOnline.pl, where Gemini 3 Pro was used to create a complete Atari 8-bit game. This Mad Pascal implementation showcases:

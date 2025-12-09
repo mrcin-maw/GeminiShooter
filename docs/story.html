@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GEMINI SHOOTER - Historia</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #0a0a1a 0%, #1a1a3a 50%, #0a0a1a 100%);
+            color: #e0e0e0;
+            line-height: 1.8;
+            min-height: 100vh;
+        }
+
+        .stars {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .star {
+            position: absolute;
+            background: white;
+            border-radius: 50%;
+            animation: twinkle 3s infinite;
+        }
+
+        @keyframes twinkle {
+            0%, 100% { opacity: 0.3; }
+            50% { opacity: 1; }
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+            position: relative;
+            z-index: 1;
+        }
+
+        header {
+            text-align: center;
+            padding: 40px 20px;
+            background: rgba(20, 20, 40, 0.8);
+            border-radius: 20px;
+            margin-bottom: 40px;
+            border: 2px solid rgba(100, 100, 255, 0.3);
+            box-shadow: 0 0 40px rgba(100, 100, 255, 0.2);
+        }
+
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            background: linear-gradient(45deg, #6366f1, #a855f7);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .subtitle {
+            font-size: 1.2em;
+            color: #a0a0ff;
+            font-style: italic;
+        }
+
+        .content {
+            background: rgba(20, 20, 40, 0.8);
+            border-radius: 15px;
+            padding: 40px;
+            margin-bottom: 30px;
+            border: 1px solid rgba(100, 100, 255, 0.2);
+            backdrop-filter: blur(10px);
+        }
+
+        .content p {
+            margin-bottom: 20px;
+            text-align: justify;
+        }
+
+        .content img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            margin: 30px auto;
+            display: block;
+            border: 2px solid rgba(100, 100, 255, 0.3);
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
+        }
+
+        .content ul {
+            margin-left: 30px;
+            margin-bottom: 20px;
+        }
+
+        .content li {
+            margin-bottom: 10px;
+        }
+
+        .quote-box {
+            background: rgba(0, 0, 0, 0.5);
+            padding: 25px;
+            border-left: 4px solid #6366f1;
+            margin: 30px 0;
+            border-radius: 5px;
+            font-style: italic;
+        }
+
+        .highlight {
+            background: rgba(100, 100, 255, 0.2);
+            padding: 2px 6px;
+            border-radius: 3px;
+        }
+
+        a {
+            color: #a0a0ff;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        a:hover {
+            color: #6366f1;
+        }
+
+        .lang-switcher {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 100;
+            display: flex;
+            gap: 10px;
+        }
+
+        .lang-btn {
+            padding: 8px 16px;
+            background: rgba(30, 30, 60, 0.9);
+            border: 1px solid rgba(100, 100, 255, 0.5);
+            border-radius: 20px;
+            color: #a0a0ff;
+            text-decoration: none;
+            font-size: 0.9em;
+            transition: all 0.3s;
+        }
+
+        .lang-btn:hover {
+            background: rgba(100, 100, 255, 0.3);
+            transform: scale(1.05);
+        }
+
+        .lang-btn.active {
+            background: linear-gradient(45deg, #6366f1, #a855f7);
+            color: white;
+            border-color: transparent;
+        }
+
+        .back-btn {
+            display: inline-block;
+            padding: 12px 24px;
+            background: rgba(100, 100, 255, 0.2);
+            border: 1px solid rgba(100, 100, 255, 0.5);
+            border-radius: 25px;
+            color: #a0a0ff;
+            text-decoration: none;
+            transition: all 0.3s;
+            margin-bottom: 20px;
+        }
+
+        .back-btn:hover {
+            background: rgba(100, 100, 255, 0.3);
+            transform: translateX(-5px);
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 1.8em;
+            }
+
+            .content {
+                padding: 20px;
+            }
+
+            .lang-switcher {
+                top: 10px;
+                right: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="lang-switcher">
+        <a href="index.html" class="lang-btn">🏠 Strona główna</a>
+        <a href="story.html" class="lang-btn active">🇵🇱 Polski</a>
+        <a href="story-en.html" class="lang-btn">🇬🇧 English</a>
+    </div>
+    <div class="stars" id="stars"></div>
+
+    <div class="container">
+        <header>
+            <h1>🚀 "GEMINI SHOOTER" by AI</h1>
+            <p class="subtitle">czyli jak GitHubowy Agent AI pozazdrościł koledze(koleżance?) Gemini</p>
+        </header>
+
+        <a href="index.html" class="back-btn">← Powrót do strony głównej</a>
+
+        <div class="content">
+            <p>Gdybyś mnie zapytał, "co się działo w piątek 28.go listopada?" - nie byłbym w stanie Ci powiedzieć - ot, jeden z tych dni, kiedy znalazłem czas siąść do swoich projektów, może trochę odpocząć po pracy słuchając "freetalku" na Zoomie AtariOnline - I tyle.</p>
+
+            <p>No, może jedna rzecz była warta uwagi...</p>
+
+            <p>Parę dni wcześniej (w środę, 26.11.2025) na AOL pojawił się artykuł Nosty'ego "AI napisało grę Atari" - gorący temat, chyba interesujący (mniej lub bardziej) każdego z nas, dyskutowany ostro na Zoomie, zwłaszcza w temacie "jakie produkcje czekają nas w najbliższym czasie?".</p>
+
+            <p>Interesujący też mnie - i to bardzo. Bo conajmniej od kilku miesięcy "(s)tresuję" różne "jejAje" wątkami na temat Atari i pisaniem na nie kodu... niestety, ciągle bez powodzenia. Do tego stopnia, że już nie pamiętam, ile razy rzucałem do ekranu komputera "niewybrednymi epitetami".</p>
+
+            <p>A tu nagle Nosty pokazuje coś "napisanego" przez AI, co działa.</p>
+
+            <p>Zagłębiłem się w artykuł - im głębiej w las, tym więcej drzew...</p>
+
+            <p>Acha. Gemini non stop się mylił. No ale szło mu już lepiej niż w poprzednich wersjach.</p>
+
+            <p>Acha. Kod był - mówiąc prostym językiem - po prostu "głupi". Jakby nie Nosty, to nic by z tego nie wyszło...</p>
+
+            <p>Acha. Poprawek tam było więcej niż samego pisania kodu przez AI...</p>
+
+            <p>No ale jest - pierwszy działający (po wielu poprawkach) efekt tego, że programowanie wspomagane przez AI na płaszczyźnie Atari - działa.</p>
+
+            <p>No I taka duża szpila w... głowie: "qrde, tyle siedzisz z tym AI, takie masz już te konfiguracje wypisane, tak przećwiczone różne podejścia - a jeszcze Ci nic nie wyszło!*" (* - co nadawało by się do opublikowania oczywiście).</p>
+
+            <p>Kiedy po kilku godzinach siedzenia na Zoomie zmęczenie dało znać o sobie, a organizm zaczął domagać się snu, ostatkiem sił wklepałem do swojego Agenta prostego prompta:</p>
+
+            <div class="quote-box">
+                <p><a href="https://atarionline.pl/v01/index.php?ct=nowinki&ucat=1&subaction=showfull&id=1764173674" target="_blank">https://atarionline.pl/v01/index.php?ct=nowinki&ucat=1&subaction=showfull&id=1764173674</a></p>
+                <p>Przeczytaj treść artykułu - znajduje się on się w tabeli html, od wiersza zawierającego: "AI napisało grę Atari", kończy na wierszu zawierającym "2025-11-26 17:14 by Kaz". Przeanalizuj wszystkie materiały zawarte w tym opisie - włacznie z grafikami, zrzutami ekranu i końcowym efektem zapisanym w filmie na YouTube. Stwórz odpowiednik tego opracowania gry, wygenerowanego przez użytkownika Nosty z Gemini 3 Pro - w MadPascalu. Masz operować językiem MadPascal i znajomością infrastruktury atari 8bit jak profesjonalny programista na plstformę 800xl/65xe. Posiłkuj się literaturą "De re Atari", "Altirra Hardware Manual", " Poradnik programisty Atari Wojciech Zientara" oraz dostępnych przykładów MadPascal wraz ze źródłami na GitHubie, np. <a href="https://github.com/tebe6502/Mad-Pascal" target="_blank">https://github.com/tebe6502/Mad-Pascal</a> Końcowym efektem ma być gra na atari 8bit, jak opisana w tym artykule. Nie ograniczaj się niczym, użyj wszelkich możliwych zasobów, aby poprawnie wykonać te zadanie. Stwórz sposób kontroli kodu i weryfikacji poprzez porównanie z innych programów na atari 8bit.</p>
+            </div>
+
+            <p>Wiedziałem - byłem pewny, że "na pewno" - NIC.Z.TEGO.NIE.WYJDZIE.</p>
+
+            <img src="story-images/media/image1.png" alt="Zrzut ekranu konwersacji z AI" />
+
+            <p>Ja poszedłem spać, a agent zaczął mielić...</p>
+
+            <p>"Ta, ta... dumaj sobie - dumaj. Prędzej mi kwiatek na czole wyrośnie, niż coś działającego urodzisz..." - I zapomniałem o tym prompcie na dobrych parę dni - a w zasadzie na cały następny tydzień...</p>
+
+            <p>Nadszedł trzeci grudnia. Znalazłem trochę czasu, żeby odpalić prywatny komputer I nawet nie pamiętam, co sprawdzałem na GitHubie... przypadkowo zawiesiłem oko na "dziwnym" tytule w kolumnie zadań agenta AI: "Gemini Shooter" - "Łod da fak jezd do" - pomyślałem sobie, zaintrygowany otwierając wątek... "O! I nawet XEX jest! Hłe, hłe hłe"</p>
+
+            <img src="story-images/media/image2.png" alt="Lista zadań agenta AI" />
+
+            <p>Otwarłem. Załadowałem XEX-a do Altirry. Już chciałem rechotać, bo moim oczom ukazała się sieczka:</p>
+
+            <img src="story-images/media/image3.png" alt="Ekran tytułowy gry" />
+
+            <p>"Skrewił, jak nic!" - pomyślałem - "Ale zaraz! TO REAGUJE!" - nacisnąłem fire i zaczęła działać gra!</p>
+
+            <p>Moim oczom ukazał się ekran z obcymi pędzącymi na mój statek, przesuwającymi się gwiazdami...</p>
+
+            <img src="story-images/media/image4.png" alt="Ekran gry" />
+
+            <p>Po przegranej załadował się - jak się domyśliłem - ekran końcowy. Po ponownym przyciśnięciu fire znowu można było grać od początku... Zrozumiałem, że te "szlaczki" - które początkowo wziąłem za błędy uruchomienia programu - to nic innego, jak teksty ATASCII na ekranie ANTICa: agent nic nie wiedział o tym, że musi przemapować zestaw znaków na ANTIC, by je poprawnie wyświetlić!</p>
+
+            <p>Następne dwie godziny spędziłem zbierając szczękę z podłogi.</p>
+
+            <p>Na czacie PTODT pozostał po tym ślad w postaci plików, które wypluł Agent i krótka notka:</p>
+
+            <div class="quote-box">
+                <p>{tutaj zrzut ekranu, który widzicie powyżej}</p>
+                <p><em>Panowie - jestem w szoku. Przyznam, że wklepałem prompta, trochę popatrzyłem, jak agent zaczyna działać - pomyślałem sobie: "przecież i tak mu nic działającego nie wyjdzie". Dzisiaj po paru dniach odkopuję się z zaległości, odpalam forka, śmieję się "hłe, hłe hłe - nawet XEXa wygenerował" - odpalam... i kopara mi opada...</em></p>
+                <p><em>mój prompt brzmiał:</em></p>
+                <p>{a tu treść prompta, którą już znacie}</p>
+                <p>[..]</p>
+                <p><strong><em>to efekt pierwszej iteracji - bez dotknięcia klawiatury przeze mnie...</em></strong></p>
+            </div>
+
+            <p>W "Mikołaja" siadłem do kodu, który wypluł AI - kod czyściutki, jak marzenie - minimalnie może by trochę zoptymalizować trzeba, ale jak na prototyp - naprawdę ładnie napisany!</p>
+
+            <p>Poprawki sprowadzały się do tego, ze tak jak myślałem - trzeba było ciągi znaków ATASCII przekonwertować na ANTIC (TeBe, "tylda" w MadPascalu jest genialna!) plus wyświetlanie wyników na ekranie (też przesunięcie w kodach ekranowych) oraz poprawić reakcję na kierunkach lewo-prawo (był odwrócony kierunek ruchu - oraz dodałem sobie "zawijanie ekranu").</p>
+
+            <p>Efekt (w poprawionej wersji) możecie oglądać tutaj: <a href="https://mrcin-maw.github.io/GeminiShooter/index-en.html" target="_blank">https://mrcin-maw.github.io/GeminiShooter/index-en.html</a> (tak, ta strona, wraz z instrukcjami, także została wygenerowana przez tego samego agenta).</p>
+
+            <img src="story-images/media/image5.png" alt="Efekt końcowy gry" />
+
+            <p>Na koniec jeszcze może dodam, że Agent AI, który wygenerował tą grę, to komercyjny GitHubowy AI - jak sprawdził Galu: "to jest Sonnet, domyślny model w Claude Code" - na zrzucie ekranu, który dodał, można było doczytać:</p>
+
+            <p>"Currently, Copilot coding aget uses Claude Sonnet 4.5".</p>
+
+            <img src="story-images/media/image6.png" alt="Informacja o modelu AI" />
+
+            <p><strong>Dlaczego te wydarzenie jest tak niesamowite?</strong></p>
+
+            <p>Pomijając już to, że Agent napisał działającą aplikację, to jeszcze:</p>
+
+            <ul>
+                <li>rozwiązał brak dostępu do strony AtariOnline.pl (plik robots.txt - obszedł go!),</li>
+                <li>rozwiązał brak kodu źródłowego,</li>
+                <li>skorzystał z YouTube, by sprawdzić, czy gra, o której wspomniałem, nie została gdzieś opublikowana,</li>
+                <li>wyciągnął informacje na temat budowy z artykułu,</li>
+                <li>zakodował w MadPascalu,</li>
+                <li><strong>skompilował,</strong></li>
+                <li><strong>i przetestował pod kątem działania!</strong></li>
+            </ul>
+
+            <p>i to wszystko bez żadnego nadzoru, czy wskazówek operatora!</p>
+
+            <p>Wypadało by podsumować na koniec - tak, jest to praca odtwórcza.</p>
+
+            <p>Tak, jest to pozbieranie X (N) elementów w kupę i poskładanie razem - ale na tyle już pozbawiona błędów, że - jak widać - nadaje się do "bezpośredniego użycia".</p>
+
+            <p>Życzę Wam miłego asystentowania AI - trzymajcie kciuki, udało się raz - ma się ochotę na więcej.</p>
+
+            <p>Tym razem już pod kontrolą i ze wsparciem operatora :-).</p>
+
+            <p>PS. W emulatorze 128KB, bo... coś się tworzy ;).</p>
+
+            <p>A na deser - przebieg "myślenia" Agenta - w pliku <a href="DEDUCTION.md">"GEMINI SHOOTER - deduction.rtf"</a>.</p>
+        </div>
+    </div>
+
+    <script>
+        function createStars() {
+            const starsContainer = document.getElementById('stars');
+            const starCount = 100;
+
+            for (let i = 0; i < starCount; i++) {
+                const star = document.createElement('div');
+                star.className = 'star';
+                
+                const size = Math.random() * 2 + 1;
+                star.style.width = size + 'px';
+                star.style.height = size + 'px';
+                star.style.left = Math.random() * 100 + '%';
+                star.style.top = Math.random() * 100 + '%';
+                star.style.animationDelay = Math.random() * 3 + 's';
+                
+                starsContainer.appendChild(star);
+            }
+        }
+
+        createStars();
+    </script>
+</body>
+</html>
