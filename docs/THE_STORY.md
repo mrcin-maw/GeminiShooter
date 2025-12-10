@@ -190,3 +190,7 @@ PS. In a 128KB emulator, because... something is being created ;).
  
 
 And for dessert - the course of the Agent's "thinking" - in the file "geminiShooter_deduction.rtf".
+
+Author: Marcin "MrCin" Wróbel
+
+(There was no AI used to write this article)
