@@ -1,254 +1,192 @@
 # "GEMINI SHOOTER" by AI
 
-*czyli jak GitHubowy Agent AI pozazdrościł koledze(koleżance?) Gemini*
+*or how the GitHub AI Agent became jealous of Gemini*
 
- 
+ 
 
-Gdybyś mnie zapytał, \"co się działo w piątek 28.go listopada?\" - nie
-byłbym w stanie Ci powiedzieć - ot, jeden z tych dni, kiedy znalazłem
-czas siąść do swoich projektów, może trochę odpocząć po pracy słuchając
-\"freetalku\" na Zoomie AtariOnline - I tyle.
+If you asked me, "what happened on Friday, November 28th?" - I wouldn't be able to tell you - just one of those days when I found time to sit down with my projects, maybe relax a bit after work while listening to the "freetalk" on AtariOnline's Zoom - And that's it.
 
- 
+ 
 
-No, może jedna rzecz była warta uwagi...
+Well, maybe one thing was worth noting...
 
- 
+ 
 
-Parę dni wcześniej (w środę, 26.11.2025) na AOL pojawił się artykuł
-Nosty\'ego \"AI napisało grę Atari\" - gorący temat, chyba interesujący
-(mniej lub bardziej) każdego z nas, dyskutowany ostro na Zoomie,
-zwłaszcza w temacie \"jakie produkcje czekają nas w najbliższym
-czasie?\".
+A few days earlier (on Wednesday, 11/26/2025), Nosty's article "AI wrote an Atari game" appeared on AOL - a hot topic, probably interesting (more or less) to each of us, hotly discussed on Zoom, especially on the subject of "what productions await us in the near future?".
 
- 
+ 
 
-Interesujący też mnie - i to bardzo. Bo conajmniej od kilku miesięcy
-\"(s)tresuję\" różne \"jejAje\" wątkami na temat Atari i pisaniem na nie
-kodu... niestety, ciągle bez powodzenia. Do tego stopnia, że już nie
-pamiętam, ile razy rzucałem do ekranu komputera \"niewybrednymi
-epitetami\".
+Interesting to me too - very much so. Because for at least a few months I've been "training" various "AIs" with topics about Atari and writing code for it... unfortunately, still without success. To the point where I can't even remember how many times I threw "crude epithets" at the computer screen.
 
- 
+ 
 
-A tu nagle Nosty pokazuje coś \"napisanego\" przez AI, co działa.
+And then suddenly Nosty shows something "written" by AI that works.
 
- 
+ 
 
-Zagłębiłem się w artykuł - im głębiej w las, tym więcej drzew...
+I delved into the article - the deeper into the forest, the more trees...
 
- 
+ 
 
-Acha. Gemini non stop się mylił. No ale szło mu już lepiej niż w
-poprzednich wersjach.
+Aha. Gemini kept making mistakes. But it was already doing better than in previous versions.
 
-Acha. Kod był - mówiąc prostym językiem - po prostu \"głupi\". Jakby nie
-Nosty, to nic by z tego nie wyszło...
+Aha. The code was - to put it simply - just "stupid". If it weren't for Nosty, nothing would have come of it...
 
-Acha. Poprawek tam było więcej niż samego pisania kodu przez AI...
+Aha. There were more corrections than actual code writing by AI...
 
- 
+ 
 
-No ale jest - pierwszy działający (po wielu poprawkach) efekt tego, że
-programowanie wspomagane przez AI na płaszczyźnie Atari - działa.
+But there it is - the first working (after many corrections) proof that AI-assisted programming on the Atari platform - works.
 
- 
+ 
 
-No I taka duża szpila w... głowie: \"qrde, tyle siedzisz z tym AI, takie
-masz już te konfiguracje wypisane, tak przećwiczone różne podejścia - a
-jeszcze Ci nic nie wyszło!\*\" (\* - co nadawało by się do opublikowania
-oczywiście).
+And such a big thorn in... my head: "damn, you've been sitting with this AI for so long, you've got all these configurations written out, so many different approaches practiced - and still nothing has worked out for you!*" (* - that would be suitable for publication, of course).
 
- 
+ 
 
-Kiedy po kilku godzinach siedzenia na Zoomie zmęczenie dało znać o
-sobie, a organizm zaczął domagać się snu, ostatkiem sił wklepałem do
-swojego Agenta prostego prompta:
+When after a few hours of sitting on Zoom fatigue made itself known, and my body began to demand sleep, with my last strength I typed a simple prompt to my Agent:
 
- 
+ 
 
   --------------------------------------------------------------------------------------------
   *<https://atarionline.pl/v01/index.php?ct=nowinki&ucat=1&subaction=showfull&id=1764173674>
-  Przeczytaj treść artykułu - znajduje się on się w tabeli html, od wiersza zawierającego:
-  \"AI napisało grę Atari\", kończy na wierszu zawierającym \"2025-11-26 17:14 by Kaz\".
-  Przeanalizuj wszystkie materiały zawarte w tym opisie - włacznie z grafikami, zrzutami
-  ekranu i końcowym efektem zapisanym w filmie na YouTube. Stwórz odpowiednik tego opracowania
-  gry, wygenerowanego przez użytkownika Nosty z Gemini 3 Pro - w MadPascalu. Masz operować
-  językiem MadPascal i znajomością infrastruktury atari 8bit jak profesjonalny programista na
-  plstformę 800xl/65xe. Posiłkuj się literaturą \"De re Atari\", \"Altirra Hardware Manual\",
-  \" Poradnik programisty Atari Wojciech Zientara\" oraz dostępnych przykładów MadPascal wraz
-  ze źródłami na GitHubie, np. <https://github.com/tebe6502/Mad-Pascal> Końcowym efektem ma
-  być gra na atari 8bit, jak opisana w tym artykule. Nie ograniczaj się niczym, użyj wszelkich
-  możliwych zasobów, aby poprawnie wykonać te zadanie. Stwórz sposób kontroli kodu i
-  weryfikacji poprzez porównanie z innych programów na atari 8bit.*
+  Read the article content - it is located in an HTML table, starting from the line containing:
+  "AI napisało grę Atari", ending with the line containing "2025-11-26 17:14 by Kaz".
+  Analyze all materials contained in this description - including graphics, screenshots and the final result saved in a YouTube video. Create an equivalent of this game development, generated by user Nosty from Gemini 3 Pro - in MadPascal. You should operate with the MadPascal language and knowledge of atari 8bit infrastructure as a professional programmer for the 800xl/65xe platform. Use literature "De re Atari", "Altirra Hardware Manual", "Poradnik programisty Atari Wojciech Zientara" and available MadPascal examples along with sources on GitHub, e.g. <https://github.com/tebe6502/Mad-Pascal> The final result should be a game for atari 8bit, as described in this article. Don't limit yourself in any way, use all possible resources to correctly perform this task. Create a way to control code and verify by comparison with other programs on atari 8bit.*
 
   --------------------------------------------------------------------------------------------
 
- 
+ 
 
-Wiedziałem - byłem pewny, że \"na pewno\" - NIC.Z.TEGO.NIE.WYJDZIE.
+I knew - I was sure that "for sure" - NOTHING.WILL.COME.OF.IT.
 
 ![IMG_256](story-images/media/image1.png)
 
- 
+ 
 
-Ja poszedłem spać, a agent zaczął mielić...
+I went to sleep, and the agent started grinding...
 
- 
+ 
 
-\"Ta, ta... dumaj sobie - dumaj. Prędzej mi kwiatek na czole wyrośnie,
-niż coś działającego urodzisz...\" - I zapomniałem o tym prompcie na
-dobrych parę dni - a w zasadzie na cały następny tydzień...
+"Yeah, yeah... think away - think away. Sooner a flower will grow on my forehead than you'll give birth to something working..." - And I forgot about that prompt for a good few days - or actually for the whole next week...
 
- 
+ 
 
-Nadszedł trzeci grudnia. Znalazłem trochę czasu, żeby odpalić prywatny
-komputer I nawet nie pamiętam, co sprawdzałem na GitHubie... przypadkowo
-zawiesiłem oko na \"dziwnym\" tytule w kolumnie zadań agenta AI:
-\"Gemini Shooter\" - \"Łod da fak jezd do\" - pomyślałem sobie,
-zaintrygowany otwierając wątek... \"O! I nawet XEX jest! Hłe, hłe hłe\"
+December 3rd came. I found some time to fire up my personal computer and I don't even remember what I was checking on GitHub... accidentally I caught sight of a "strange" title in the AI agent's task column: "Gemini Shooter" - "What the heck is that" - I thought to myself, intrigued, opening the thread... "Oh! And there's even an XEX! Ha, ha ha"
 
 ![IMG_257](story-images/media/image2.png)
 
- 
+ 
 
-Otwarłem. Załadowałem XEX-a do Altirry. Już chciałem rechotać, bo moim
-oczom ukazała się sieczka:
+I opened it. Loaded the XEX into Altirra. I was about to laugh, because my eyes saw garbage:
 
- 
+ 
 
 ![IMG_258](story-images/media/image3.png)
 
- 
+ 
 
-\"Skrewił, jak nic!\" - pomyślałem - \"Ale zaraz! TO REAGUJE!\" -
-nacisnąłem fire i zaczęła działać gra!
+"He screwed up, for sure!" - I thought - "But wait! IT RESPONDS!" - I pressed fire and the game started working!
 
- 
+ 
 
-Moim oczom ukazał się ekran z obcymi pędzącymi na mój statek,
-przesuwającymi się gwiazdami\...\
- 
+My eyes saw a screen with aliens rushing at my ship, moving stars...
+ 
 
 ![IMG_259](story-images/media/image4.png)
 
- 
+ 
 
-Po przegranej załadował się - jak się domyśliłem - ekran końcowy. Po
-ponownym przyciśnięciu fire znowu można było grać od początku\...
-Zrozumiałem, że te \"szlaczki\" - które początkowo wziąłem za błędy
-uruchomienia programu - to nic innego, jak teksty ATASCII na ekranie
-ANTICa: agent nic nie wiedział o tym, że musi przemapować zestaw znaków
-na ANTIC, by je poprawnie wyświetlić!
+After losing, what I assumed was the final screen loaded. After pressing fire again, you could play from the beginning again... I understood that these "streaks" - which I initially took as program launch errors - were nothing but ATASCII texts on the ANTIC screen: the agent knew nothing about having to remap the character set to ANTIC to display them correctly!
 
- 
+ 
 
-Następne dwie godziny spędziłem zbierając szczękę z podłogi.
+I spent the next two hours picking my jaw up off the floor.
 
- 
+ 
 
-Na czacie PTODT pozostał po tym ślad w postaci plików, które wypluł
-Agent i krótka notka:
+On the PTODT chat, there remained a trace of this in the form of files that the Agent spat out and a short note:
 
-> {tutaj zrzut ekranu, który widzicie powyżej}
+> {here the screenshot you see above}
 > 
-> *Panowie - jestem w szoku. Przyznam, że wklepałem prompta, trochę popatrzyłem, jak agent zaczyna działać - pomyślałem sobie: "przecież i tak mu nic działającego nie wyjdzie". Dzisiaj po paru dniach odkopuję się z zaległości, odpalam forka, śmieję się "hłe, hłe hłe - nawet XEXa wygenerował" - odpalam... i kopara mi opada...*
+> *Gentlemen - I'm in shock. I'll admit, I typed in the prompt, watched for a bit as the agent started working - thought to myself: "nothing working will come of it anyway". Today after a few days I'm digging out of backlogs, firing up the fork, laughing "ha, ha ha - it even generated an XEX" - I run it... and my jaw drops...*
 > 
-> *mój prompt brzmiał:*
+> *my prompt was:*
 > 
-> {a tu treść prompta, którą już znacie}
+> {and here the content of the prompt you already know}
 > 
 > [..]
 > 
-> ***to efekt pierwszej iteracji - bez dotknięcia klawiatury przeze mnie...***
+> ***this is the result of the first iteration - without me touching the keyboard...***
 
-W \"Mikołaja\" siadłem do kodu, który wypluł AI - kod czyściutki, jak
-marzenie - minimalnie może by trochę zoptymalizować trzeba, ale jak na
-prototyp - naprawdę ładnie napisany!
+On St. Nicholas Day, I sat down with the code that the AI spat out - clean code, like a dream - maybe could be optimized a bit, but for a prototype - really nicely written!
 
- 
+ 
 
-Poprawki sprowadzały się do tego, ze tak jak myślałem - trzeba było
-ciągi znaków ATASCII przekonwertować na ANTIC (TeBe, \"tylda\" w
-MadPascalu jest genialna!) plus wyświetlanie wyników na ekranie (też
-przesunięcie w kodach ekranowych) oraz poprawić reakcję na kierunkach
-lewo-prawo (był odwrócony kierunek ruchu - oraz dodałem sobie
-\"zawijanie ekranu\").
+The corrections came down to what I thought - ATASCII character strings needed to be converted to ANTIC (TeBe, the "tilde" in MadPascal is brilliant!) plus displaying results on screen (also shift in screen codes) and fixing the left-right direction response (the movement direction was reversed - and I added "screen wrapping").
 
- 
+ 
 
-Efekt (w poprawionej wersji) możecie oglądać tutaj:
-<https://mrcin-maw.github.io/GeminiShooter/index-en.html> (tak, ta
-strona, wraz z instrukcjami, także została wygenerowana przez tego
-samego agenta).
+You can see the result (in the corrected version) here: <https://mrcin-maw.github.io/GeminiShooter/index-en.html> (yes, this page, along with instructions, was also generated by the same agent).
 
- 
+ 
 
 ![IMG_260](story-images/media/image5.png)
 
- 
+ 
 
-Na koniec jeszcze może dodam, że Agent AI, który wygenerował tą grę, to
-komercyjny GitHubowy AI - jak sprawdził Galu: \"to jest Sonnet, domyślny
-model w Claude Code\" - na zrzucie ekranu, który dodał, można było
-doczytać:
+Finally, I might add that the AI Agent that generated this game is commercial GitHub AI - as Galu checked: "it's Sonnet, the default model in Claude Code" - on the screenshot he added, you could read:
 
-\"Currently, Copilot coding aget uses Claude Sonnet 4.5\".
+"Currently, Copilot coding agent uses Claude Sonnet 4.5".
 
- 
+ 
 
 ![IMG_261](story-images/media/image6.png)
 
- 
+ 
 
-Dlaczego te wydarzenie jest tak niesamowite?
+Why is this event so amazing?
 
- 
+ 
 
-Pomijając już to, że Agent napisał działającą aplikację, to jeszcze:
+Apart from the fact that the Agent wrote a working application, it also:
 
- 
+ 
 
--   rozwiązał brak dostępu do strony AtariOnline.pl (plik robots.txt -
-    > obszedł go!),
+-   solved the lack of access to the AtariOnline.pl site (robots.txt file - bypassed it!),
 
--   rozwiązał brak kodu źródłowego,
+-   solved the lack of source code,
 
--   skorzystał z YouTube, by sprawdzić, czy gra, o której wspomniałem,
-    > nie została gdzieś opublikowana,
+-   used YouTube to check if the game I mentioned wasn't published somewhere,
 
--   wyciągnął informacje na temat budowy z artykułu,
+-   extracted information about the structure from the article,
 
--   zakodował w MadPascalu,
+-   coded in MadPascal,
 
--   **skompilował,**
+-   **compiled,**
 
--   **i przetestował pod kątem działania!**
+-   **and tested for functionality!**
 
- 
+ 
 
-i to wszystko bez żadnego nadzoru, czy wskazówek operatora!
+and all this without any supervision or operator guidance!
 
- 
+ 
 
-Wypadało by podsumować na koniec - tak, jest to praca odtwórcza.
+It would be appropriate to summarize at the end - yes, this is recreative work.
 
-Tak, jest to pozbieranie X (N) elementów w kupę i poskładanie razem -
-ale na tyle już pozbawiona błędów, że - jak widać - nadaje się do
-\"bezpośredniego użycia\".
+Yes, it's gathering X (N) elements into a pile and putting them together - but already so free of errors that - as you can see - it's suitable for "direct use".
 
- 
+ 
 
-Życzę Wam miłego asystentowania AI - trzymajcie kciuki, udało się raz -
-ma się ochotę na więcej.
+I wish you pleasant AI assistance - keep your fingers crossed, it worked once - you feel like more.
 
-Tym razem już pod kontrolą i ze wsparciem operatora :-).
+This time already under control and with operator support :-).
 
- 
+ 
 
-PS. W emulatorze 128KB, bo\... coś się tworzy ;).
+PS. In a 128KB emulator, because... something is being created ;).
 
- 
+ 
 
-A na deser - przebieg \"myślenia\" Agenta - w pliku
-"geminiShooter_deduction.rtf".
+And for dessert - the course of the Agent's "thinking" - in the file "geminiShooter_deduction.rtf".
