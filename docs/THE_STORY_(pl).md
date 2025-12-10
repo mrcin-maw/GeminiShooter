@@ -253,6 +253,6 @@ PS. W emulatorze 128KB, bo\... coś się tworzy ;).
 A na deser - przebieg \"myślenia\" Agenta - w pliku
 "geminiShooter_deduction.rtf".
 
-Autor: Marcinn "MrCin" Wróbel. 
+Autor: Marcin "MrCin" Wróbel. 
 
 (do napisania tego dokumentu nie zostało użyte żadne AI)
