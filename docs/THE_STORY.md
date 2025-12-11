@@ -115,4 +115,4 @@ And for dessert — the course of the Agent's "thinking" — in the file "gemini
 
 Author: MrCin/MaW
 
-(No AI was used to write this document)
+(No AI was used to write this story)
