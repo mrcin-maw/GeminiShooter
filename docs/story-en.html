@@ -5,60 +5,214 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GEMINI SHOOTER - The Story</title>
     <style>
-        body
-        {
-            font-family: Arial, Helvetica, sans-serif;
-            background-color: #0b0b14;
-            color: #e6e6e6;
+        * {
             margin: 0;
-            padding: 20px;
+            padding: 0;
+            box-sizing: border-box;
         }
-        .wrapper
-        {
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #0a0a1a 0%, #1a1a3a 50%, #0a0a1a 100%);
+            color: #e0e0e0;
+            line-height: 1.8;
+            min-height: 100vh;
+        }
+
+        .stars {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .star {
+            position: absolute;
+            background: white;
+            border-radius: 50%;
+            animation: twinkle 3s infinite;
+        }
+
+        @keyframes twinkle {
+            0%, 100% { opacity: 0.3; }
+            50% { opacity: 1; }
+        }
+
+        .container {
             max-width: 900px;
             margin: 0 auto;
-            background-color: #101025;
-            padding: 24px;
-            border: 1px solid #222244;
-            border-radius: 8px;
+            padding: 20px;
+            position: relative;
+            z-index: 1;
         }
-        h1, h2
-        {
+
+        header {
             text-align: center;
-            color: #dcdcff;
+            padding: 40px 20px;
+            background: rgba(20, 20, 40, 0.8);
+            border-radius: 20px;
+            margin-bottom: 40px;
+            border: 2px solid rgba(100, 100, 255, 0.3);
+            box-shadow: 0 0 40px rgba(100, 100, 255, 0.2);
         }
-        p
-        {
-            line-height: 1.7;
+
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            background: linear-gradient(45deg, #6366f1, #a855f7);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .subtitle {
+            font-size: 1.2em;
+            color: #a0a0ff;
+            font-style: italic;
+        }
+
+        .content {
+            background: rgba(20, 20, 40, 0.8);
+            border-radius: 15px;
+            padding: 40px;
+            margin-bottom: 30px;
+            border: 1px solid rgba(100, 100, 255, 0.2);
+            backdrop-filter: blur(10px);
+        }
+
+        .content p {
+            margin-bottom: 20px;
             text-align: justify;
-            margin-bottom: 16px;
         }
-        img
-        {
-            display: block;
+
+        .content img {
             max-width: 100%;
-            margin: 18px auto;
-            border: 2px solid #2a2a50;
-            border-radius: 6px;
+            height: auto;
+            border-radius: 10px;
+            margin: 30px auto;
+            display: block;
+            border: 2px solid rgba(100, 100, 255, 0.3);
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
         }
-        ul
-        {
-            margin-left: 20px;
+
+        .content ul {
+            margin-left: 30px;
+            margin-bottom: 20px;
         }
-        footer
-        {
-            text-align: center;
-            margin-top: 18px;
-            color: #bdbddf;
+
+        .content li {
+            margin-bottom: 10px;
+        }
+
+        .quote-box {
+            background: rgba(0, 0, 0, 0.5);
+            padding: 25px;
+            border-left: 4px solid #6366f1;
+            margin: 30px 0;
+            border-radius: 5px;
+            font-style: italic;
+        }
+
+        .highlight {
+            background: rgba(100, 100, 255, 0.2);
+            padding: 2px 6px;
+            border-radius: 3px;
+        }
+
+        a {
+            color: #a0a0ff;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        a:hover {
+            color: #6366f1;
+        }
+
+        .lang-switcher {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 100;
+            display: flex;
+            gap: 10px;
+        }
+
+        .lang-btn {
+            padding: 8px 16px;
+            background: rgba(30, 30, 60, 0.9);
+            border: 1px solid rgba(100, 100, 255, 0.5);
+            border-radius: 20px;
+            color: #a0a0ff;
+            text-decoration: none;
+            font-size: 0.9em;
+            transition: all 0.3s;
+        }
+
+        .lang-btn:hover {
+            background: rgba(100, 100, 255, 0.3);
+            transform: scale(1.05);
+        }
+
+        .lang-btn.active {
+            background: linear-gradient(45deg, #6366f1, #a855f7);
+            color: white;
+            border-color: transparent;
+        }
+
+        .back-btn {
+            display: inline-block;
+            padding: 12px 24px;
+            background: rgba(100, 100, 255, 0.2);
+            border: 1px solid rgba(100, 100, 255, 0.5);
+            border-radius: 25px;
+            color: #a0a0ff;
+            text-decoration: none;
+            transition: all 0.3s;
+            margin-bottom: 20px;
+        }
+
+        .back-btn:hover {
+            background: rgba(100, 100, 255, 0.3);
+            transform: translateX(-5px);
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 1.8em;
+            }
+
+            .content {
+                padding: 20px;
+            }
+
+            .lang-switcher {
+                top: 10px;
+                right: 10px;
+            }
         }
     </style>
 </head>
 <body>
-<div class="wrapper">
-    <h1>"GEMINI SHOOTER" by AI</h1>
-    <p><em>or: how the GitHub AI Agent got jealous of its colleague Gemini</em></p>
+    <div class="lang-switcher">
+        <a href="index.html" class="lang-btn">🏠 Home</a>
+        <a href="story.html" class="lang-btn">🇵🇱 Polski</a>
+        <a href="story-en.html" class="lang-btn active">🇬🇧 English</a>
+    </div>
+    <div class="stars" id="stars"></div>
 
-    <h2>The story</h2>
+    <div class="container">
+        <header>
+            <h1>🚀 "GEMINI SHOOTER" by AI</h1>
+            <p class="subtitle">or: how the GitHub AI Agent got jealous of its colleague Gemini</p>
+        </header>
+
+        <a href="index-en.html" class="back-btn">← Back to homepage</a>
+
+        <div class="content">
 
     <p>If you had asked me, "what happened on Friday, November 28th?" — I wouldn't be able to tell you — just one of those days when I found time to sit with my projects, maybe relax a bit after work while listening to a "freetalk" on Zoom of AtariOnline — and that's it.</p>
     
@@ -80,16 +234,10 @@
 
     <p>When after a few hours of sitting on Zoom fatigue made itself known, and my body began to demand sleep, with my last strength I typed a simple prompt to my Agent:</p>
 
-    <pre style="white-space: pre-wrap; background:#0b0b14; padding:10px; border-radius:4px; border:1px solid #222; color:#dcdcff;">&lt;https://atarionline.pl/v01/index.php?ct=nowinki&amp;ucat=1&amp;subaction=showfull&amp;id=1764173674&gt;
-Read the article content — it is located in an HTML table, starting from the line containing:
-"AI napisało grę Atari", and ending with the line containing "2025-11-26 17:14 by Kaz".
-Analyze all materials contained in this description — including graphics, screenshots and the final result saved in a YouTube video.
-        Create an equivalent of this game development, generated by user Nosty with Gemini 3 Pro — in MadPascal. 
-        You must operate using MadPascal and the knowledge of Atari 8-bit infrastructure as a professional developer for the 800XL/65XE platform.
-        Rely on literature "De re Atari", "Altirra Hardware Manual", "Atari Programmer's Guide by Wojciech Zientara" and available MadPascal examples and sources on GitHub, e.g. &lt;https://github.com/tebe6502/Mad-Pascal&gt;.
-        The end result must be a game for Atari 8-bit as described in this article.
-        Do not limit yourself; use any possible resources to accomplish this task correctly.
-        Create a method of code control and verification by comparison with other Atari 8-bit programs.</pre>
+    <div class="quote-box">
+        <p><a href="https://atarionline.pl/v01/index.php?ct=nowinki&ucat=1&subaction=showfull&id=1764173674" target="_blank">https://atarionline.pl/v01/index.php?ct=nowinki&ucat=1&subaction=showfull&id=1764173674</a></p>
+        <p>Read the article content — it is located in an HTML table, starting from the line containing: "AI napisało grę Atari", and ending with the line containing "2025-11-26 17:14 by Kaz". Analyze all materials contained in this description — including graphics, screenshots and the final result saved in a YouTube video. Create an equivalent of this game development, generated by user Nosty with Gemini 3 Pro — in MadPascal. You must operate using MadPascal and the knowledge of Atari 8-bit infrastructure as a professional developer for the 800XL/65XE platform. Rely on literature "De re Atari", "Altirra Hardware Manual", "Atari Programmer's Guide by Wojciech Zientara" and available MadPascal examples and sources on GitHub, e.g. <a href="https://github.com/tebe6502/Mad-Pascal" target="_blank">https://github.com/tebe6502/Mad-Pascal</a> The end result must be a game for Atari 8-bit as described in this article. Do not limit yourself; use any possible resources to accomplish this task correctly. Create a method of code control and verification by comparison with other Atari 8-bit programs.</p>
+    </div>
 
     <p>I knew — I was sure that "for sure" — NOTHING.WILL.COME.OF.IT.</p>
 
@@ -119,23 +267,20 @@ Analyze all materials contained in this description — including graphics, scre
 
     <p>On the PTODT chat, there remained a trace of this in the form of files that the Agent spat out and a short note:</p>
 
-    <blockquote style="color:#cfcfff; background:#0b0b14; padding:10px; border-left:4px solid #333;">{here the screenshot you see above}
-
-*Gentlemen — I'm in shock. I'll admit, I typed in the prompt, watched for a bit as the agent started working — thought to myself: "nothing working will come of it anyway". Today, after a few days, I dig myself out of the backlog, I launch the fork, I laugh "heh, heh heh - he even generated XEX" - I launch it... and my jaw drops... 
-
-*my prompt was:*
-
-{and here the content of the prompt you already know}
-
-[..]
-
-***this is the result of the first iteration — without me touching the keyboard...***</blockquote>
+    <div class="quote-box">
+        <p>{here the screenshot you see above}</p>
+        <p><em>Gentlemen — I'm in shock. I'll admit, I typed in the prompt, watched for a bit as the agent started working — thought to myself: "nothing working will come of it anyway". Today, after a few days, I dig myself out of the backlog, I launch the fork, I laugh "heh, heh heh - he even generated XEX" - I launch it... and my jaw drops...</em></p>
+        <p><em>my prompt was:</em></p>
+        <p>{and here the content of the prompt you already know}</p>
+        <p>[..]</p>
+        <p><strong><em>this is the result of the first iteration — without me touching the keyboard...</em></strong></p>
+    </div>
 
     <p>On St. Nicholas Day I sat down with the code that the AI spat out — clean code, like a dream — maybe it could use a bit of optimization, but for a prototype — really nicely written!</p>
 
     <p>The corrections boiled down to what I thought — that ATASCII character strings needed to be converted to ANTIC (TeBe, the "tilde" in MadPascal is brilliant!) plus displaying results on screen (also shifting in the screen codes) and correcting the left-right direction response (it was reversed, also I added "screen wrapping").</p>
 
-    <p>You can see the result (in the corrected version) here: <a href="https://mrcin-maw.github.io/GeminiShooter/index-en.html">https://mrcin-maw.github.io/GeminiShooter/index-en.html</a> (yes, this webpage, along with the instructions, was also generated by the same agent).</p>
+    <p>You can see the result (in the corrected version) here: <a href="https://mrcin-maw.github.io/GeminiShooter/index-en.html" target="_blank">https://mrcin-maw.github.io/GeminiShooter/index-en.html</a> (yes, this webpage, along with the instructions, was also generated by the same agent).</p>
 
     <img src="story-images/media/image5.png" alt="Final game" />
 
@@ -145,7 +290,7 @@ Analyze all materials contained in this description — including graphics, scre
 
     <img src="story-images/media/image6.png" alt="Informacja o modelu AI" />
 
-    <h2>Why is this event so amazing?</h2>
+    <p><strong>Why is this event so amazing?</strong></p>
 
     <p>Aside from the fact that the Agent wrote a working application, it also:</p>
     <ul>
@@ -174,9 +319,31 @@ Analyze all materials contained in this description — including graphics, scre
 
     <p>Author: Marcin "MrCin" Wróbel</p>
 
-    <p>(No AI was used to write this document*)</p>
+    <p>(No AI was used to write this document)</p>
+        </div>
+    </div>
 
-    <footer>(*translation updated by Copilot)</footer>
-</div>
+    <script>
+        function createStars() {
+            const starsContainer = document.getElementById('stars');
+            const starCount = 100;
+
+            for (let i = 0; i < starCount; i++) {
+                const star = document.createElement('div');
+                star.className = 'star';
+                
+                const size = Math.random() * 2 + 1;
+                star.style.width = size + 'px';
+                star.style.height = size + 'px';
+                star.style.left = Math.random() * 100 + '%';
+                star.style.top = Math.random() * 100 + '%';
+                star.style.animationDelay = Math.random() * 3 + 's';
+                
+                starsContainer.appendChild(star);
+            }
+        }
+
+        createStars();
+    </script>
 </body>
 </html>
