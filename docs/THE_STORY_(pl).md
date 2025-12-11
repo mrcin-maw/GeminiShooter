@@ -255,4 +255,4 @@ A na deser - przebieg \"myślenia\" Agenta - w pliku
 
 Autor: MrCin/MaW. 
 
-(do napisania tego dokumentu nie zostało użyte żadne AI)
+(do napisania tej historii nie zostało użyte żadne AI)
