@@ -1,0 +1,6 @@
+# Build artifacts
+builds/*.a65
+builds/*.lst
+
+# Object files
+*.o
