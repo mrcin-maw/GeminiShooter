@@ -88,7 +88,7 @@ swojego Agenta prostego prompta:
 
 Wiedziałem - byłem pewny, że \"na pewno\" - NIC.Z.TEGO.NIE.WYJDZIE.
 
-![IMG_256](story-images/media/image1.png)
+![IMG_256](../story-images/media/image1.png)
 
  
 
@@ -108,7 +108,7 @@ zawiesiłem oko na \"dziwnym\" tytule w kolumnie zadań agenta AI:
 \"Gemini Shooter\" - \"Łod da fak jezd do\" - pomyślałem sobie,
 zaintrygowany otwierając wątek... \"O! I nawet XEX jest! Hłe, hłe hłe\"
 
-![IMG_257](story-images/media/image2.png)
+![IMG_257](../story-images/media/image2.png)
 
  
 
@@ -117,7 +117,7 @@ oczom ukazała się sieczka:
 
  
 
-![IMG_258](story-images/media/image3.png)
+![IMG_258](../story-images/media/image3.png)
 
  
 
@@ -130,7 +130,7 @@ Moim oczom ukazał się ekran z obcymi pędzącymi na mój statek,
 przesuwającymi się gwiazdami\...\
  
 
-![IMG_259](story-images/media/image4.png)
+![IMG_259](../story-images/media/image4.png)
 
  
 
@@ -184,7 +184,7 @@ samego agenta).
 
  
 
-![IMG_260](story-images/media/image5.png)
+![IMG_260](../story-images/media/image5.png)
 
  
 
@@ -197,7 +197,7 @@ doczytać:
 
  
 
-![IMG_261](story-images/media/image6.png)
+![IMG_261](../story-images/media/image6.png)
 
  
 
