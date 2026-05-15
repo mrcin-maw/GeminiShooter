@@ -355,9 +355,10 @@
             <h2>▶ Play in Browser</h2>
             <p style="margin: 20px 0; font-size: 1.1em;">Atari 8-bit emulator (AltirraSDL WebAssembly) — click ▶ to launch the game</p>
             <iframe
-                src="https://lobby.atari.org.pl/AltirraSDL/play/?lib=https://mrcin-maw.github.io/GeminiShooter/builds/GeminiShooter.xex&pal=1&hardware=130xe&memsize=320K&title=GeminiShooter"
-                style="border:0; width:100%; aspect-ratio:7/5; max-width:900px; min-height:520px; display:block; margin:0 auto; background:#000;"
+                src="altirra/index.html?embed=1&lib=../builds/GeminiShooter.xex&pal=1&addons=off&experience=authentic&autoplay=0&crt=1&artifact=none&stretch=integral"
+                style="border:0; width:100%; aspect-ratio:7/5; max-width:672px; display:block; margin:0 auto; background:#000;"
                 allow="autoplay; fullscreen; gamepad"
+                loading="lazy"
                 title="Gemini Shooter — Atari 8-bit Emulator">
             </iframe>
             <p style="margin-top: 15px; color: #888; font-size: 0.9em;">
